@@ -26,21 +26,25 @@ struct HomeView: View {
             
            
             
-            VStack {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        
-                       // Dummy data
-                        ForEach((0...5), id: \.self) {
-                            RecentWidgetView(name: "\($0)")
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            
+                           // Dummy data
+                            ForEach((0...5), id: \.self) {
+                                RecentWidgetView(name: "\($0)")
+                            }
+                            
                         }
-                        
+                        .padding()
                     }
-                    .padding(.horizontal)
+                    
+                    ForEach(classesData, id: \.self) { userClass in
+                        ClassView(followers: userClass.followers, messages: userClass.messages, posts: userClass.posts, title: userClass.title, image: userClass.image)
+                    }
+                    
                 }
-                
-                
-                
             }
             
             Spacer(minLength: 0)
@@ -48,6 +52,25 @@ struct HomeView: View {
     }
 }
 
+
+
+struct Classes: Hashable {
+    let followers: Int
+    let messages: Int
+    let posts: Int
+    let title: String
+    let image: String
+    
+    init(followers: Int, messages: Int, posts: Int, title: String, image: String) {
+        self.followers = followers
+        self.messages = messages
+        self.posts = posts
+        self.title = title
+        self.image = image
+    }
+}
+
+let classesData = [Classes(followers: 320, messages: 660, posts: 20, title: "AP Human Geography", image: "aphug"), Classes(followers: 600, messages: 1001, posts: 124, title: "AP World History", image: "apwh"), Classes(followers: 100, messages: 500, posts: 42, title: "AP Physics 1", image: "apphy1")]
 
 
 struct HomeView_Previews: PreviewProvider {

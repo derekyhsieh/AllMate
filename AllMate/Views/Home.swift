@@ -62,7 +62,7 @@ struct Home: View {
             .background(Color.black)
         }
         .ignoresSafeArea(.all, edges: .bottom)
-        .background(Color.black.opacity(0.9).ignoresSafeArea(.all, edges: .all))
+        .background(Color(#colorLiteral(red: 0.06234747916, green: 0.07035475224, blue: 0.07323782891, alpha: 1)).edgesIgnoringSafeArea(.all))
     }
 }
 

@@ -18,6 +18,7 @@
 		4B6CBFA926097B950011E461 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFA826097B950011E461 /* CustomShape.swift */; };
 		4B6CBFAC26097BB80011E461 /* TabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFAB26097BB80011E461 /* TabData.swift */; };
 		4B6CBFAF26097CC60011E461 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFAE26097CC60011E461 /* ModelData.swift */; };
+		659F2C632609A2AF001850C8 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2C622609A2AF001850C8 /* ClassView.swift */; };
 		65E6F4C5260994CE003DE0EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6F4C4260994CE003DE0EF /* HomeView.swift */; };
 		65E6F4CA26099829003DE0EF /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E6F4C826099711003DE0EF /* Pacifico-Regular.ttf */; };
 		65E6F4CD26099B4C003DE0EF /* RecentWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6F4CC26099B4C003DE0EF /* RecentWidgetView.swift */; };
@@ -37,6 +38,7 @@
 		4B6CBFA826097B950011E461 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		4B6CBFAB26097BB80011E461 /* TabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabData.swift; sourceTree = "<group>"; };
 		4B6CBFAE26097CC60011E461 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		659F2C622609A2AF001850C8 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		65E6F4C4260994CE003DE0EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		65E6F4C826099711003DE0EF /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		65E6F4CC26099B4C003DE0EF /* RecentWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		4B6CBF99260923F50011E461 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				659F2C612609A2A0001850C8 /* Home Feed */,
 				4B6CBF88260923DC0011E461 /* ContentView.swift */,
 				4B6CBF9B2609240B0011E461 /* Home.swift */,
 				4B6CBFA526097B7B0011E461 /* TabButton.swift */,
@@ -113,6 +116,14 @@
 				4B6CBFAE26097CC60011E461 /* ModelData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		659F2C612609A2A0001850C8 /* Home Feed */ = {
+			isa = PBXGroup;
+			children = (
+				659F2C622609A2AF001850C8 /* ClassView.swift */,
+			);
+			path = "Home Feed";
 			sourceTree = "<group>";
 		};
 		65E6F4C726099704003DE0EF /* Fonts */ = {
@@ -204,6 +215,7 @@
 				65E6F4CD26099B4C003DE0EF /* RecentWidgetView.swift in Sources */,
 				4B6CBFA626097B7B0011E461 /* TabButton.swift in Sources */,
 				4B6CBF89260923DC0011E461 /* ContentView.swift in Sources */,
+				659F2C632609A2AF001850C8 /* ClassView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +359,7 @@
 				DEVELOPMENT_TEAM = V5P29Y93LL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AllMate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,6 +381,7 @@
 				DEVELOPMENT_TEAM = V5P29Y93LL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AllMate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
