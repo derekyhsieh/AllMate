@@ -59,10 +59,10 @@ struct Home: View {
             .padding(.horizontal, 30)
             // for iPhones with old design (SE, 8)
             .padding(.bottom, edges!.bottom == 0 ? 15 : edges!.bottom)
-            .background(Color.black)
+            .background(Color("Tab Bar background"))
         }
         .ignoresSafeArea(.all, edges: .bottom)
-        .background(Color(#colorLiteral(red: 0.06234747916, green: 0.07035475224, blue: 0.07323782891, alpha: 1)).edgesIgnoringSafeArea(.all))
+        .background(Color("Background").edgesIgnoringSafeArea(.all))
     }
 }
 

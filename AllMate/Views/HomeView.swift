@@ -13,13 +13,13 @@ struct HomeView: View {
             HStack {
                 Text("AllMate")
                     .font(Font.custom("Pacifico-Regular", size: 50))
-                    .foregroundColor(Color.white.opacity(0.9))
+                    .foregroundColor(Color("FontColor").opacity(0.9))
                     .padding(.leading, 5)
                 Spacer()
                 Button(action: {}) {
                     Image(systemName: "plus.square.fill")
                         .font(.system(size: 40))
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color("FontColor").opacity(0.9))
                         .padding(.trailing, 5)
                 }
             }

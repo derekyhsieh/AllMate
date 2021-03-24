@@ -45,14 +45,14 @@ struct TabButton: View {
                
                 
                 Image(systemName: imageName)
-                    .foregroundColor(selectedTab == title ? Color("tint") : Color.white.opacity(0.2))
+                    .foregroundColor(selectedTab == title ? Color("tint") : Color("FontColor").opacity(0.2))
                     .frame(width: 24, height: 24)
                     .font(.system(size: 24))
                 
                 Text(title)
                     .font(.caption)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white.opacity(selectedTab == title ? 0.6 : 0.2))
+                    .foregroundColor(Color("FontColor").opacity(selectedTab == title ? 0.6 : 0.2))
             }
         }
     }
