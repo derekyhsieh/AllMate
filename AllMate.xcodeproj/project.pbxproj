@@ -20,13 +20,16 @@
 		4B6CBFAF26097CC60011E461 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFAE26097CC60011E461 /* ModelData.swift */; };
 		65510CF6260BFE4E00E0557F /* LoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65510CF5260BFE4E00E0557F /* LoginHomeView.swift */; };
 		65510CFC260C4ECD00E0557F /* WavesAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65510CFB260C4ECD00E0557F /* WavesAnimation.swift */; };
+		65510D00260C542A00E0557F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65510CFF260C542A00E0557F /* GoogleService-Info.plist */; };
 		659F2C632609A2AF001850C8 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2C622609A2AF001850C8 /* ClassView.swift */; };
 		65E6F4C5260994CE003DE0EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6F4C4260994CE003DE0EF /* HomeView.swift */; };
 		65E6F4CA26099829003DE0EF /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E6F4C826099711003DE0EF /* Pacifico-Regular.ttf */; };
 		65E6F4CD26099B4C003DE0EF /* RecentWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6F4CC26099B4C003DE0EF /* RecentWidgetView.swift */; };
+		A65B345EF188A639A291F5D7 /* Pods_AllMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2789E3E44B2C366276763DA /* Pods_AllMate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187111C1F19FF3C5A1DE2F6D /* Pods-AllMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllMate.debug.xcconfig"; path = "Target Support Files/Pods-AllMate/Pods-AllMate.debug.xcconfig"; sourceTree = "<group>"; };
 		4B6CBF81260923DC0011E461 /* AllMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6CBF84260923DC0011E461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6CBF86260923DC0011E461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,10 +45,13 @@
 		4B6CBFAE26097CC60011E461 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		65510CF5260BFE4E00E0557F /* LoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeView.swift; sourceTree = "<group>"; };
 		65510CFB260C4ECD00E0557F /* WavesAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesAnimation.swift; sourceTree = "<group>"; };
+		65510CFF260C542A00E0557F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		659F2C622609A2AF001850C8 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		65E6F4C4260994CE003DE0EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		65E6F4C826099711003DE0EF /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		65E6F4CC26099B4C003DE0EF /* RecentWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetView.swift; sourceTree = "<group>"; };
+		B11CAB97B13F71DBC8211EAD /* Pods-AllMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllMate.release.xcconfig"; path = "Target Support Files/Pods-AllMate/Pods-AllMate.release.xcconfig"; sourceTree = "<group>"; };
+		C2789E3E44B2C366276763DA /* Pods_AllMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65B345EF188A639A291F5D7 /* Pods_AllMate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +71,8 @@
 			children = (
 				4B6CBF83260923DC0011E461 /* AllMate */,
 				4B6CBF82260923DC0011E461 /* Products */,
+				B2CE3208AF2BEDA72125FB46 /* Pods */,
+				63FCFCA383D89C861E3ED2C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +87,7 @@
 		4B6CBF83260923DC0011E461 /* AllMate */ = {
 			isa = PBXGroup;
 			children = (
+				65510CFF260C542A00E0557F /* GoogleService-Info.plist */,
 				65E6F4C726099704003DE0EF /* Fonts */,
 				4B6CBF84260923DC0011E461 /* AppDelegate.swift */,
 				4B6CBF86260923DC0011E461 /* SceneDelegate.swift */,
@@ -124,6 +134,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		63FCFCA383D89C861E3ED2C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2789E3E44B2C366276763DA /* Pods_AllMate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65510CE8260BEF5700E0557F /* Login  */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +174,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B2CE3208AF2BEDA72125FB46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				187111C1F19FF3C5A1DE2F6D /* Pods-AllMate.debug.xcconfig */,
+				B11CAB97B13F71DBC8211EAD /* Pods-AllMate.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B6CBF95260923DE0011E461 /* Build configuration list for PBXNativeTarget "AllMate" */;
 			buildPhases = (
+				DAF03AB000738DDB9893F57F /* [CP] Check Pods Manifest.lock */,
 				4B6CBF7D260923DC0011E461 /* Sources */,
 				4B6CBF7E260923DC0011E461 /* Frameworks */,
 				4B6CBF7F260923DC0011E461 /* Resources */,
+				7DD511A91858E96EF5FB7E9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,10 +247,53 @@
 				65E6F4CA26099829003DE0EF /* Pacifico-Regular.ttf in Resources */,
 				4B6CBFA0260972440011E461 /* Assets.xcassets in Resources */,
 				4B6CBF8E260923DE0011E461 /* Preview Assets.xcassets in Resources */,
+				65510D00260C542A00E0557F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DD511A91858E96EF5FB7E9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllMate/Pods-AllMate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllMate/Pods-AllMate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllMate/Pods-AllMate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF03AB000738DDB9893F57F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllMate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B6CBF7D260923DC0011E461 /* Sources */ = {
@@ -375,6 +448,7 @@
 		};
 		4B6CBF96260923DE0011E461 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187111C1F19FF3C5A1DE2F6D /* Pods-AllMate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,6 +471,7 @@
 		};
 		4B6CBF97260923DE0011E461 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B11CAB97B13F71DBC8211EAD /* Pods-AllMate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
