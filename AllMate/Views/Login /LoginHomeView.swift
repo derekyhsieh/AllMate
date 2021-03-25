@@ -1,5 +1,5 @@
 //
-//  LoginHomeView.swift
+//  WaveAnimation.swift
 //  AllMate
 //
 //  Created by Derek Hsieh on 3/24/21.
@@ -8,25 +8,19 @@
 import SwiftUI
 
 struct LoginHomeView: View {
-    
-    @State var isAnimated = false
     let universalSize = UIScreen.main.bounds
     
+    @State var isAnimated = false
     var body: some View {
-       
         
         NavigationView {
-            ZStack {
-                
-                    Color.black.edgesIgnoringSafeArea(.all)
-                
-              
-                
-                WaveAnimation()
-                
-                
-   
-                
+            ZStack(alignment: .bottom) {
+            
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+                WavesAnimation()
+                    
+            
                 VStack {
                     HStack {
                         Text("AllMate")
@@ -88,19 +82,18 @@ struct LoginHomeView: View {
                     
                     
                 }
-                
-                
-                
-            }
+            
+            
+        }
             .navigationBarHidden(true)
+           
+        }
+        .onAppear(){
+            self.isAnimated = true
         }
             
-    
-       
     }
     
-    
-    // Wave animation
     func getSinWave(interval:CGFloat, amplitude: CGFloat = 100 ,baseline:CGFloat = UIScreen.main.bounds.height/2) -> Path {
         Path{path in
             path.move(to: CGPoint(x: 0, y: baseline
@@ -122,10 +115,9 @@ struct LoginHomeView: View {
         }
     
     }
-
 }
 
-struct LoginHomeView_Previews: PreviewProvider {
+struct WaveAnimation_Previews: PreviewProvider {
     static var previews: some View {
         LoginHomeView()
     }
