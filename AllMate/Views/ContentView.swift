@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage("isLoggedIn") var isUserLoggedIn = false
+    
     var body: some View {
-//        Home()
-        LoginHomeView()
+        
+        if isUserLoggedIn {
+            Home()
+                .transition(.slide)
+        } else {
+            LoginHomeView()
+                .transition(.opacity)
+        }
+
     }
 }
 

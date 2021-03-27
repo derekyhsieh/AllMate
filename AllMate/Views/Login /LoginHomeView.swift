@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginHomeView: View {
     let universalSize = UIScreen.main.bounds
+    @AppStorage("isLoggedIn") var isUserLoggedIn = false
     
     @State var isAnimated = false
     var body: some View {
@@ -44,7 +45,7 @@ struct LoginHomeView: View {
                     }
                     .frame(width: UIScreen.main.bounds.width - 60)
                     
-                    NavigationLink(destination: Text("login")) {
+                    NavigationLink(destination: LoginView()) {
          
       
                         RoundedRectangle(cornerRadius: 15)
@@ -60,7 +61,7 @@ struct LoginHomeView: View {
                     }
                     .padding(.vertical)
                     
-                    NavigationLink(destination: Text("sign up")) {
+                    NavigationLink(destination: SignupView()) {
          
       
                         RoundedRectangle(cornerRadius: 15)
@@ -82,12 +83,14 @@ struct LoginHomeView: View {
                     
                     
                 }
+                
             
             
-        }
-            .navigationBarHidden(true)
+            }
+            
            
         }
+        .accentColor(.white)
         .onAppear(){
             self.isAnimated = true
         }
@@ -120,5 +123,6 @@ struct LoginHomeView: View {
 struct WaveAnimation_Previews: PreviewProvider {
     static var previews: some View {
         LoginHomeView()
+            .preferredColorScheme(.dark)
     }
 }

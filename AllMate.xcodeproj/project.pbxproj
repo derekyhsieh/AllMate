@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,10 +18,18 @@
 		4B6CBFA926097B950011E461 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFA826097B950011E461 /* CustomShape.swift */; };
 		4B6CBFAC26097BB80011E461 /* TabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFAB26097BB80011E461 /* TabData.swift */; };
 		4B6CBFAF26097CC60011E461 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFAE26097CC60011E461 /* ModelData.swift */; };
+		650E007B260D40220028E0CE /* UnderlineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E007A260D40220028E0CE /* UnderlineTextFieldView.swift */; };
+		650E007F260D41C50028E0CE /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 650E007E260D41C50028E0CE /* iPhoneNumberField */; };
 		65510CF6260BFE4E00E0557F /* LoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65510CF5260BFE4E00E0557F /* LoginHomeView.swift */; };
 		65510CFC260C4ECD00E0557F /* WavesAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65510CFB260C4ECD00E0557F /* WavesAnimation.swift */; };
 		65510D00260C542A00E0557F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65510CFF260C542A00E0557F /* GoogleService-Info.plist */; };
+		65647708260D697C0086FF91 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65647707260D697C0086FF91 /* CustomDivider.swift */; };
+		65832CD1260D6DED00D99293 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65832CD0260D6DED00D99293 /* LoginView.swift */; };
+		65832CD4260D6EA400D99293 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65832CD3260D6EA400D99293 /* SignupView.swift */; };
 		659F2C632609A2AF001850C8 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2C622609A2AF001850C8 /* ClassView.swift */; };
+		65B89036260EC18D00FE79B9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89035260EC18D00FE79B9 /* String.swift */; };
+		65B89039260EEBBA00FE79B9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89038260EEBBA00FE79B9 /* UserViewModel.swift */; };
+		65B8903C260EEDFD00FE79B9 /* LoadingPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8903B260EEDFD00FE79B9 /* LoadingPopup.swift */; };
 		65E6F4C5260994CE003DE0EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6F4C4260994CE003DE0EF /* HomeView.swift */; };
 		65E6F4CA26099829003DE0EF /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E6F4C826099711003DE0EF /* Pacifico-Regular.ttf */; };
 		65E6F4CD26099B4C003DE0EF /* RecentWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6F4CC26099B4C003DE0EF /* RecentWidgetView.swift */; };
@@ -43,10 +51,18 @@
 		4B6CBFA826097B950011E461 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		4B6CBFAB26097BB80011E461 /* TabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabData.swift; sourceTree = "<group>"; };
 		4B6CBFAE26097CC60011E461 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		650E007A260D40220028E0CE /* UnderlineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldView.swift; sourceTree = "<group>"; };
 		65510CF5260BFE4E00E0557F /* LoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeView.swift; sourceTree = "<group>"; };
 		65510CFB260C4ECD00E0557F /* WavesAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesAnimation.swift; sourceTree = "<group>"; };
 		65510CFF260C542A00E0557F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65647707260D697C0086FF91 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
+		65832CD0260D6DED00D99293 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		65832CD3260D6EA400D99293 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		659F2C622609A2AF001850C8 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
+		65B89032260E8B9500FE79B9 /* AllMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AllMate.entitlements; sourceTree = "<group>"; };
+		65B89035260EC18D00FE79B9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../../../../Users/derek/Desktop/String.swift; sourceTree = "<group>"; };
+		65B89038260EEBBA00FE79B9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		65B8903B260EEDFD00FE79B9 /* LoadingPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPopup.swift; sourceTree = "<group>"; };
 		65E6F4C4260994CE003DE0EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		65E6F4C826099711003DE0EF /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		65E6F4CC26099B4C003DE0EF /* RecentWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetView.swift; sourceTree = "<group>"; };
@@ -60,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65B345EF188A639A291F5D7 /* Pods_AllMate.framework in Frameworks */,
+				650E007F260D41C50028E0CE /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +104,8 @@
 		4B6CBF83260923DC0011E461 /* AllMate */ = {
 			isa = PBXGroup;
 			children = (
+				65B89034260EC18000FE79B9 /* Extensions */,
+				65B89032260E8B9500FE79B9 /* AllMate.entitlements */,
 				65510CFF260C542A00E0557F /* GoogleService-Info.plist */,
 				65E6F4C726099704003DE0EF /* Fonts */,
 				4B6CBF84260923DC0011E461 /* AppDelegate.swift */,
@@ -130,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				4B6CBFAE26097CC60011E461 /* ModelData.swift */,
+				65B89038260EEBBA00FE79B9 /* UserViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +166,11 @@
 			isa = PBXGroup;
 			children = (
 				65510CF5260BFE4E00E0557F /* LoginHomeView.swift */,
+				65832CD0260D6DED00D99293 /* LoginView.swift */,
+				650E007A260D40220028E0CE /* UnderlineTextFieldView.swift */,
+				65647707260D697C0086FF91 /* CustomDivider.swift */,
+				65832CD3260D6EA400D99293 /* SignupView.swift */,
+				65B8903B260EEDFD00FE79B9 /* LoadingPopup.swift */,
 			);
 			path = "Login ";
 			sourceTree = "<group>";
@@ -166,6 +191,14 @@
 			path = "Home Feed";
 			sourceTree = "<group>";
 		};
+		65B89034260EC18000FE79B9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				65B89035260EC18D00FE79B9 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		65E6F4C726099704003DE0EF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +213,6 @@
 				187111C1F19FF3C5A1DE2F6D /* Pods-AllMate.debug.xcconfig */,
 				B11CAB97B13F71DBC8211EAD /* Pods-AllMate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,6 +234,9 @@
 			dependencies = (
 			);
 			name = AllMate;
+			packageProductDependencies = (
+				650E007E260D41C50028E0CE /* iPhoneNumberField */,
+			);
 			productName = AllMate;
 			productReference = 4B6CBF81260923DC0011E461 /* AllMate.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +264,9 @@
 				Base,
 			);
 			mainGroup = 4B6CBF78260923DC0011E461;
+			packageReferences = (
+				650E007D260D41C50028E0CE /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
 			productRefGroup = 4B6CBF82260923DC0011E461 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,18 +338,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65647708260D697C0086FF91 /* CustomDivider.swift in Sources */,
 				65E6F4C5260994CE003DE0EF /* HomeView.swift in Sources */,
 				65510CFC260C4ECD00E0557F /* WavesAnimation.swift in Sources */,
+				650E007B260D40220028E0CE /* UnderlineTextFieldView.swift in Sources */,
 				4B6CBFAC26097BB80011E461 /* TabData.swift in Sources */,
+				65832CD4260D6EA400D99293 /* SignupView.swift in Sources */,
 				4B6CBF85260923DC0011E461 /* AppDelegate.swift in Sources */,
 				4B6CBF9C2609240B0011E461 /* Home.swift in Sources */,
 				4B6CBFA926097B950011E461 /* CustomShape.swift in Sources */,
 				4B6CBF87260923DC0011E461 /* SceneDelegate.swift in Sources */,
 				4B6CBFAF26097CC60011E461 /* ModelData.swift in Sources */,
 				65E6F4CD26099B4C003DE0EF /* RecentWidgetView.swift in Sources */,
+				65B89036260EC18D00FE79B9 /* String.swift in Sources */,
+				65B89039260EEBBA00FE79B9 /* UserViewModel.swift in Sources */,
 				65510CF6260BFE4E00E0557F /* LoginHomeView.swift in Sources */,
+				65B8903C260EEDFD00FE79B9 /* LoadingPopup.swift in Sources */,
 				4B6CBFA626097B7B0011E461 /* TabButton.swift in Sources */,
 				4B6CBF89260923DC0011E461 /* ContentView.swift in Sources */,
+				65832CD1260D6DED00D99293 /* LoginView.swift in Sources */,
 				659F2C632609A2AF001850C8 /* ClassView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -436,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -452,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AllMate/AllMate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AllMate/Preview Content\"";
 				DEVELOPMENT_TEAM = V5P29Y93LL;
@@ -475,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AllMate/AllMate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AllMate/Preview Content\"";
 				DEVELOPMENT_TEAM = V5P29Y93LL;
@@ -514,6 +561,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		650E007D260D41C50028E0CE /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		650E007E260D41C50028E0CE /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 650E007D260D41C50028E0CE /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B6CBF79260923DC0011E461 /* Project object */;
 }

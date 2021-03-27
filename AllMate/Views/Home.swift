@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct Home: View {
     @State var selectedTab = "Home"
@@ -26,9 +27,23 @@ struct Home: View {
                     Text("Activity")
                         .opacity(selectedTab == "Activity" ? 1 : 0)
                     
-                        Text("Search")
-                            .opacity(selectedTab == "Search" ? 1 : 0)
-                    Text("Profile")
+                    Text("Search")
+                        .opacity(selectedTab == "Search" ? 1 : 0)
+                    
+                    Button(action: {
+                            
+                        do {
+                            try Auth.auth().signOut()
+                            UserDefaults.standard.setValue(false, forKey: "isLoggedIn")
+                            
+                        } catch let error as NSError {
+                            print ("Error signing out: %@", error)
+                        }
+                     
+                        
+                    }) {
+                        Text("sign out")
+                    }
                         .opacity(selectedTab == "Profile" ? 1 : 0)
                     
                 }

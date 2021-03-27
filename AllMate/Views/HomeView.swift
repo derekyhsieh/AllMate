@@ -28,17 +28,18 @@ struct HomeView: View {
             
             ScrollView(showsIndicators: false) {
                 VStack {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            
-                           // Dummy data
-                            ForEach((0...5), id: \.self) {
-                                RecentWidgetView(name: "\($0)")
-                            }
-                            
-                        }
-                        .padding()
-                    }
+                    
+//                    ScrollView(.horizontal, showsIndicators: false) {
+//                        HStack(spacing: 20) {
+//
+//                           // Dummy data
+//                            ForEach((0...5), id: \.self) {
+//                                RecentWidgetView(name: "\($0)")
+//                            }
+//
+//                        }
+//                        .padding()
+//                    }
                     
                     ForEach(classesData, id: \.self) { userClass in
                         ClassView(followers: userClass.followers, messages: userClass.messages, posts: userClass.posts, title: userClass.title, image: userClass.image)
