@@ -2,8 +2,7 @@
 //  OnboardingStepView.swift
 //  Onboarding
 //
-//  Created by Augustinas Malinauskas on 06/07/2020.
-//  Copyright © 2020 Augustinas Malinauskas. All rights reserved.
+//  Created by Derek Hsieh on 3/28/21.
 //
 
 import SwiftUI

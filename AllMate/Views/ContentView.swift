@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @AppStorage("isLoggedIn") var isUserLoggedIn = false
+    @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
         
@@ -17,6 +18,9 @@ struct ContentView: View {
             Home()
                 .transition(.slide)
                 .preferredColorScheme(.dark)
+                .onAppear {
+                    userViewModel.fetchUserData()
+                }
         } else {
             LoginHomeView()
                 .transition(.opacity)

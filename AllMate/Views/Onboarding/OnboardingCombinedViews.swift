@@ -6,30 +6,29 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct OnboardingCombinedViews: View {
+    let db = Firestore.firestore()
     @StateObject var classDataModel = ClassDataModel()
     @State var username: String = ""
     @State var showingView = 1
+    @State var isShowingLoadingScreen = false
     let screen = UIScreen.main.bounds
     
     var body: some View {
-        VStack {
+        ZStack(alignment: .center) {
+            VStack {
             ZStack(alignment: .center) {
                 
                 OnboardingStepView2(classDataModel: classDataModel)
                     .offset(x: showingView == 2 ? 0 : screen.width)
                     .animation(.spring())
-                    
-                    
                 
                 OnboardingStepView(username: $username)
                     .offset(x: showingView == 1 ? 0 : -screen.width)
                     .animation(.spring())
-                    
-                    
                 
-              
             }
             
             VStack {
@@ -55,7 +54,10 @@ struct OnboardingCombinedViews: View {
                     Button(action: {
                         
                         if self.username != "" && !self.classDataModel.userPickedClasses.isEmpty {
+                            
                             UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+                            // push to firebase
+                            saveUserInfoToFirebase(username: username, userClasses: classDataModel.userPickedClasses)
                         }
                         else if  username != "" {
                             showingView = 2
@@ -88,7 +90,47 @@ struct OnboardingCombinedViews: View {
             }
             .frame(height: 75)
         }
+            
+            if isShowingLoadingScreen {
+                LoadingPopup()
+            }
+           
+        }
         .preferredColorScheme(.light)
+    }
+    
+    func saveUserInfoToFirebase(username: String, userClasses: [String]) {
+        self.isShowingLoadingScreen = true
+        
+        let user = Auth.auth().currentUser
+           if let user = user {
+            let changeRequest = user.createProfileChangeRequest()
+
+            changeRequest.displayName = username
+            
+            // set userClasses in users colleciton with document named as user's user id
+            let userClassArray: [String: Any] = [ "UserClasses": userClasses ]
+            
+            db.collection("users").document(Auth.auth().currentUser!.uid).setData(userClassArray) {error in
+                // error handling and code completition
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    // success
+                    print("classes saved successfully")
+                }
+            }
+              
+            changeRequest.commitChanges { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                  print("profile created")
+                    self.isShowingLoadingScreen = false
+                    
+                }
+              }
+            }
     }
 }
 
