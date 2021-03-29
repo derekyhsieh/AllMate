@@ -11,14 +11,22 @@ import FirebaseAuth
 
 struct SignupView: View {
     
-    @AppStorage("isLoggedIn") var isUserLoggedIn = false
     @State private var userPassword = ""
     @State private var userEmail = ""
     @State private var reenterPassword = ""
     @State private var createUserIsComplete = false
+    @State private var showOnboardingScreen = false
     
     var body: some View {
-        ZStack {
+        
+        if showOnboardingScreen {
+            // onboarding view
+            
+            OnboardingCombinedViews()
+            
+        } else {
+            // sign up view
+            ZStack {
             Color.black.opacity(0.7).edgesIgnoringSafeArea(.all)
             WavesAnimation()
                 .rotationEffect(.degrees(180))
@@ -100,6 +108,7 @@ struct SignupView: View {
             .padding(.bottom)
             
         }
+        }
     }
     
     private func createUser(email: String, pass: String) {
@@ -114,8 +123,8 @@ struct SignupView: View {
                     return
                 } else {
                     createUserIsComplete = true
+                    showOnboardingScreen = true
                     print("success")
-                    isUserLoggedIn = true
                 }
             }
         } else if !email.isValidEmail() {

@@ -20,7 +20,6 @@ struct LoginHomeView: View {
             Color.black.edgesIgnoringSafeArea(.all)
             
                 WavesAnimation()
-                    
             
                 VStack {
                     HStack {
@@ -84,8 +83,6 @@ struct LoginHomeView: View {
                     
                 }
                 
-            
-            
             }
             
            

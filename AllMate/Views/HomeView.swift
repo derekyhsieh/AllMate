@@ -77,6 +77,7 @@ let classesData = [Classes(followers: 320, messages: 660, posts: 20, title: "AP 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .preferredColorScheme(.dark)
             .background(Color.black.opacity(0.9).ignoresSafeArea(.all, edges: .all))
     }
 }

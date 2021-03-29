@@ -16,6 +16,7 @@ struct ContentView: View {
         if isUserLoggedIn {
             Home()
                 .transition(.slide)
+                .preferredColorScheme(.dark)
         } else {
             LoginHomeView()
                 .transition(.opacity)

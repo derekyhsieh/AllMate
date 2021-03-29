@@ -11,9 +11,11 @@ import SwiftUI
 struct UnderlineTextFieldView<TextFieldView>: View where TextFieldView: View {
     
     @Binding var text: String
+    var color: Color = Color.white
     let textFieldView: TextFieldView
     let placeholder: String
     var imageName: String? = nil
+    
     
     private var isTextFieldWithIcon: Bool {
         return imageName != nil
@@ -65,7 +67,7 @@ extension UnderlineTextFieldView {
     
     private var underlineView: some View {
         Rectangle().frame(height: 1)
-            .foregroundColor(.white)
+            .foregroundColor(color)
             .padding(.trailing, 16)
             .padding(.leading, isTextFieldWithIcon ? 0 : 16)
     }
