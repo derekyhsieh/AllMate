@@ -88,7 +88,7 @@ struct ClassView: View {
 
 struct ClassView_Previews: PreviewProvider {
     static var previews: some View {
-        ClassView(followers: 320, messages: 630, posts: 20, title: "AP Human Geography", image: "aphug")
+        ClassView(followers: 320, messages: 630, posts: 20, title: "AP Human Geography", image: "AP Human Geography")
             
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ClassWidget: View {
     var className: String
+    let background: Color
     
     @State var isSelected = false
     @StateObject var classDataModel: ClassDataModel
@@ -16,10 +17,10 @@ struct ClassWidget: View {
     var body: some View {
         Capsule()
             .frame(width: UIScreen.main.bounds.width - 75, height: 75)
-            .opacity(isSelected ? 0.5 : 0.1)
+            .opacity(isSelected ? 0.5 : background == Color.black ? 0.3 : 0.1)
             .overlay(
                 Text(className)
-                    .foregroundColor(isSelected ? .white : .black)
+                    .foregroundColor(isSelected ? .white : background == Color.black ? Color.white.opacity(0.8) : .black)
                     .bold()
                     
             )
@@ -28,7 +29,9 @@ struct ClassWidget: View {
                 self.addOrDeleteClass(className: className)
             }
             .animation(.easeInOut)
+        
     }
+    
     
     func addOrDeleteClass(className: String) {
         if classDataModel.userPickedClasses.contains(className) {
@@ -41,8 +44,44 @@ struct ClassWidget: View {
 
 }
 
+struct ClassWidgetPicker: View {
+    var className: String
+    let background: Color
+    
+    @State var isSelected = false
+    @StateObject var userViewModel: UserViewModel
+    
+    var body: some View {
+        Capsule()
+            .frame(width: UIScreen.main.bounds.width - 75, height: 75)
+            .opacity(isSelected ? 0.5 : background == Color.black ? 0.3 : 0.1)
+            .overlay(
+                Text(className)
+                    .foregroundColor(isSelected ? .white : background == Color.black ? Color.white.opacity(0.8) : .black)
+                    .bold()
+                    
+            )
+            .onTapGesture {
+                isSelected.toggle()
+                self.addOrDeleteClass(className: className)
+            }
+            .animation(.easeInOut)
+
+    }
+    
+    func addOrDeleteClass(className: String) {
+        if userViewModel.classes.contains(className) {
+            let classToRemove = className
+            userViewModel.classes.remove(object: classToRemove)
+        } else {
+            userViewModel.classes.append(className)
+        }
+    }
+
+}
+
 struct ClassWidget_Previews: PreviewProvider {
     static var previews: some View {
-        ClassWidget(className: "AP Human Geography", classDataModel: ClassDataModel())
+        ClassWidget(className: "AP Human Geography", background: Color.black, classDataModel: ClassDataModel())
     }
 }

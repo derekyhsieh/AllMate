@@ -21,6 +21,7 @@ struct ContentView: View {
                 .onAppear {
                     userViewModel.fetchUserData()
                 }
+                .environmentObject(userViewModel)
         } else {
             LoginHomeView()
                 .transition(.opacity)

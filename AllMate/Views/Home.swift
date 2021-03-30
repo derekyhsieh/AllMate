@@ -11,7 +11,7 @@ import FirebaseAuth
 struct Home: View {
     @State var selectedTab = "Home"
     @Namespace var animation
-    @StateObject var modelData = ModelView()
+    @StateObject var modelData = AppStateModelView()
     
     var edges = UIApplication.shared.windows.first?.safeAreaInsets
     

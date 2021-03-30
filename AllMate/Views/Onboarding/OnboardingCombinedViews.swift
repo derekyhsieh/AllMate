@@ -21,7 +21,7 @@ struct OnboardingCombinedViews: View {
             VStack {
             ZStack(alignment: .center) {
                 
-                OnboardingStepView2(classDataModel: classDataModel)
+                OnboardingStepView2(classDataModel: classDataModel, backgroundColor: Color.white)
                     .offset(x: showingView == 2 ? 0 : screen.width)
                     .animation(.spring())
                 

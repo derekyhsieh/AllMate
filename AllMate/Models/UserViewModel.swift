@@ -27,6 +27,9 @@ class UserViewModel: ObservableObject {
     
     func fetchUserData() {
         self.userData.userUID = Auth.auth().currentUser!.uid
+        self.userData.userEmail = Auth.auth().currentUser!.email!
+        self.userData.userEmail = Auth.auth().currentUser!.displayName!
+        
         self.db.collection("users").getDocuments { (snapshot, error) in
             // error handling
             if let error = error {
@@ -35,6 +38,7 @@ class UserViewModel: ObservableObject {
                 for document in snapshot!.documents {
                     self.classes = document.get("UserClasses") as! [String]
                     print(self.classes)
+                    ClassDataModel().loadUserPickedClasses()
                 }
             }
         }

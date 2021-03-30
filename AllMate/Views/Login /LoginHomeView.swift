@@ -23,7 +23,7 @@ struct LoginHomeView: View {
             
                 VStack {
                     HStack {
-                        Text("AllMate")
+                        Text("AllMates")
                             .foregroundColor(.white)
                             .font(Font.custom("Pacifico-Regular", size: 50))
                             .padding(.leading, 30)

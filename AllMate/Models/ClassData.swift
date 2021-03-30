@@ -33,6 +33,10 @@ class ClassDataModel: ObservableObject {
         "AP Biology"
     
     ]
+    
+    func loadUserPickedClasses() {
+        userPickedClasses = UserViewModel().classes
+    }
 }
 
 

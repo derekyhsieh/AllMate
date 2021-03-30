@@ -18,7 +18,6 @@
 		4B6CBFA926097B950011E461 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFA826097B950011E461 /* CustomShape.swift */; };
 		4B6CBFAC26097BB80011E461 /* TabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFAB26097BB80011E461 /* TabData.swift */; };
 		4B6CBFAF26097CC60011E461 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CBFAE26097CC60011E461 /* ModelData.swift */; };
-		4BF72933261190E000907276 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF72932261190E000907276 /* String.swift */; };
 		650E007B260D40220028E0CE /* UnderlineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E007A260D40220028E0CE /* UnderlineTextFieldView.swift */; };
 		650E007F260D41C50028E0CE /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 650E007E260D41C50028E0CE /* iPhoneNumberField */; };
 		65510CF6260BFE4E00E0557F /* LoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65510CF5260BFE4E00E0557F /* LoginHomeView.swift */; };
@@ -27,6 +26,8 @@
 		65647708260D697C0086FF91 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65647707260D697C0086FF91 /* CustomDivider.swift */; };
 		65832CD1260D6DED00D99293 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65832CD0260D6DED00D99293 /* LoginView.swift */; };
 		65832CD4260D6EA400D99293 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65832CD3260D6EA400D99293 /* SignupView.swift */; };
+		6588CFD12612A14F00068854 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588CFD02612A14F00068854 /* String.swift */; };
+		6588CFD52612A15D00068854 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588CFD42612A15C00068854 /* String.swift */; };
 		659F2C632609A2AF001850C8 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2C622609A2AF001850C8 /* ClassView.swift */; };
 		65B89039260EEBBA00FE79B9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89038260EEBBA00FE79B9 /* UserViewModel.swift */; };
 		65B8903C260EEDFD00FE79B9 /* LoadingPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8903B260EEDFD00FE79B9 /* LoadingPopup.swift */; };
@@ -57,7 +58,6 @@
 		4B6CBFA826097B950011E461 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		4B6CBFAB26097BB80011E461 /* TabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabData.swift; sourceTree = "<group>"; };
 		4B6CBFAE26097CC60011E461 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		4BF72932261190E000907276 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		650E007A260D40220028E0CE /* UnderlineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldView.swift; sourceTree = "<group>"; };
 		65510CF5260BFE4E00E0557F /* LoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeView.swift; sourceTree = "<group>"; };
 		65510CFB260C4ECD00E0557F /* WavesAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesAnimation.swift; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		65647707260D697C0086FF91 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 		65832CD0260D6DED00D99293 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		65832CD3260D6EA400D99293 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		6588CFD02612A14F00068854 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6588CFD42612A15C00068854 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		659F2C622609A2AF001850C8 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		65B89032260E8B9500FE79B9 /* AllMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AllMate.entitlements; sourceTree = "<group>"; };
 		65B89038260EEBBA00FE79B9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				4B6CBFAE26097CC60011E461 /* ModelData.swift */,
+				65B8904926104F8C00FE79B9 /* ClassData.swift */,
 				65B89038260EEBBA00FE79B9 /* UserViewModel.swift */,
 			);
 			path = Models;
@@ -207,7 +210,8 @@
 		65B89034260EC18000FE79B9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4BF72932261190E000907276 /* String.swift */,
+				6588CFD02612A14F00068854 /* String.swift */,
+				6588CFD42612A15C00068854 /* String.swift */,
 				65B8904D2611075F00FE79B9 /* Array.swift */,
 			);
 			path = Extensions;
@@ -219,7 +223,6 @@
 				65B89043261036F500FE79B9 /* OnboardingDataModel.swift */,
 				65B89040261036CF00FE79B9 /* OnboardingStepView.swift */,
 				65B890462610479000FE79B9 /* ClassWidget.swift */,
-				65B8904926104F8C00FE79B9 /* ClassData.swift */,
 				65B89050261108AA00FE79B9 /* OnboardingCombinedViews.swift */,
 			);
 			path = Onboarding;
@@ -367,7 +370,8 @@
 				65647708260D697C0086FF91 /* CustomDivider.swift in Sources */,
 				65E6F4C5260994CE003DE0EF /* HomeView.swift in Sources */,
 				65B89044261036F500FE79B9 /* OnboardingDataModel.swift in Sources */,
-				4BF72933261190E000907276 /* String.swift in Sources */,
+				6588CFD52612A15D00068854 /* String.swift in Sources */,
+				6588CFD12612A14F00068854 /* String.swift in Sources */,
 				65510CFC260C4ECD00E0557F /* WavesAnimation.swift in Sources */,
 				650E007B260D40220028E0CE /* UnderlineTextFieldView.swift in Sources */,
 				4B6CBFAC26097BB80011E461 /* TabData.swift in Sources */,

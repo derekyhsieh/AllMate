@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class ModelView: ObservableObject {
+class AppStateModelView: ObservableObject {
     
     @Published var isActivityLoaded = false
     @Published var isSearchLoaded = false

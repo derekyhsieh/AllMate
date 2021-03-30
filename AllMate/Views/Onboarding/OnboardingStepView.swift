@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct OnboardingStepView: View {
     @Binding var username: String
@@ -31,8 +32,11 @@ struct OnboardingStepView: View {
 
 struct OnboardingStepView2: View {
     @ObservedObject var classDataModel: ClassDataModel
+    let backgroundColor: Color
         
     var body: some View {
+        
+            
         VStack {
             Image("onboarding-class")
                 .resizable()
@@ -68,7 +72,7 @@ struct OnboardingStepView2: View {
                                 .fontWeight(.semibold)
                                 .padding(.vertical, 10)
                                 .padding(.horizontal)
-                                .background(Capsule().stroke(Color.black, lineWidth: 1))
+                                .background(Capsule().stroke(backgroundColor == Color.black ? Color.white : Color.black, lineWidth: 1))
                                 .lineLimit(1)
                         }
                     }
@@ -84,7 +88,7 @@ struct OnboardingStepView2: View {
                 
                 VStack(spacing: 10) {
                     ForEach(classDataModel.classes, id: \.self) { className in
-                        ClassWidget(className: className, classDataModel: classDataModel)
+                        ClassWidget(className: className, background: Color.black, classDataModel: classDataModel)
                     }
                 }
                 
@@ -92,15 +96,113 @@ struct OnboardingStepView2: View {
             }
             .frame(height: 300)
         }
+        
     .padding()
     }
 }
 
-struct OnboardingStepView_Previews: PreviewProvider {
+struct UserClassPickerView: View {
+    @ObservedObject var userViewModel: UserViewModel
+    @Binding var show: Bool
+    let db = Firestore.firestore()
     
-    static var previews: some View {
-        OnboardingStepView2(classDataModel: ClassDataModel())
+    var backgroundColor: Color
+        
+    var body: some View {
+        
+            
+        VStack {
+            HStack {
+                Text("Choose the Classes You Are Taking")
+                    .font(.system(size: 25, design: .rounded))
+                    .fontWeight(.bold)
+                    .padding()
+                    
+                Spacer(minLength: 0)
+                Button(action: {
+                    show = false
+                    
+                    saveClassesToFirebase()
+                }) {
+                    Image(systemName: "xmark")
+                        .foregroundColor(.white)
+                        .font(.title2)
+                        .padding()
+                }
+            }
+            .padding(.top, 50)
+        
+                
+        
+            
+//            Text(data.text)
+//                .font(.system(size: 17, design: .rounded))
+//                .fontWeight(.medium)
+//                .multilineTextAlignment(.center)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    
+                    if userViewModel.classes.isEmpty {
+                        Text("AP Human Geography")
+                            .foregroundColor(.clear)
+                            .fontWeight(.semibold)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal)
+                            .background(Capsule().stroke(Color.clear, lineWidth: 1))
+                            .lineLimit(1)
+                    } else {
+                        ForEach(userViewModel.classes, id: \.self) { userPickedClass in
+                            
+                            Text(userPickedClass)
+                                .fontWeight(.semibold)
+                                .padding(.vertical, 10)
+                                .padding(.horizontal)
+                                .background(Capsule().stroke(backgroundColor == Color.black ? Color.white : Color.black, lineWidth: 1))
+                                .lineLimit(1)
+                        }
+                    }
+                 
+                }
+                .padding()
+            }
+            
+            Spacer()
+         
+            
+            ScrollView(showsIndicators: false) {
+                
+                VStack(spacing: 10) {
+                    ForEach(ClassDataModel().classes, id: \.self) { className in
+                        if userViewModel.classes.contains(className) {
+                            ClassWidgetPicker(className: className, background: Color.black, isSelected: true, userViewModel: userViewModel)
+                        } else {
+                            ClassWidgetPicker(className: className, background: Color.black, userViewModel: userViewModel)
+                        }
+                  
+                    }
+                }
+                
+         
+            }
+            .frame(maxHeight: UIScreen.main.bounds.height)
+        }
+        
+    .padding()
+    }
+    
+    private func saveClassesToFirebase() {
+        
+        // updating user following class document on firebase
+        self.db.collection("users").document(userViewModel.userData.userUID).updateData(["UserClasses" : userViewModel.classes]) { (error) in
+            // error hadling
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            } else {
+                print("successfully updated user's followed classes to firebase")
+            }
+        }
     }
 }
-
 

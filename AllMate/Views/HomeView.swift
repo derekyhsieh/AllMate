@@ -8,20 +8,33 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject var userViewModel: UserViewModel
+    @ObservedObject var classDataModel = ClassDataModel()
+    @State private var showClassPickerView = false
+    
     var body: some View {
+        ZStack {
+        
         VStack(spacing: 10) {
             HStack {
-                Text("AllMate")
+                Text("AllMates")
                     .font(Font.custom("Pacifico-Regular", size: 50))
                     .foregroundColor(Color("FontColor").opacity(0.9))
                     .padding(.leading, 5)
                 Spacer()
-                Button(action: {}) {
+                
+                Button(action: {
+                    
+                    showClassPickerView = true
+                    
+                }) {
                     Image(systemName: "plus.square.fill")
                         .font(.system(size: 40))
                         .foregroundColor(Color("FontColor").opacity(0.9))
                         .padding(.trailing, 5)
                 }
+          
             }
             
            
@@ -41,14 +54,19 @@ struct HomeView: View {
 //                        .padding()
 //                    }
                     
-                    ForEach(classesData, id: \.self) { userClass in
-                        ClassView(followers: userClass.followers, messages: userClass.messages, posts: userClass.posts, title: userClass.title, image: userClass.image)
+                    ForEach(userViewModel.classes, id: \.self) { userClass in
+                        ClassView(followers: 31, messages: 293, posts: 1002, title: userClass, image: userClass)
                     }
                     
                 }
             }
             
             Spacer(minLength: 0)
+        }
+         
+            UserClassPickerView(userViewModel: userViewModel, show: $showClassPickerView, backgroundColor: Color.black).edgesIgnoringSafeArea(.all).background(Color(#colorLiteral(red: 0.039206855, green: 0.04314254224, blue: 0.04704723507, alpha: 1)))
+                .offset(y: showClassPickerView ? 0 : -UIScreen.main.bounds.height)
+                .animation(.spring())
         }
     }
 }
@@ -71,7 +89,7 @@ struct Classes: Hashable {
     }
 }
 
-let classesData = [Classes(followers: 320, messages: 660, posts: 20, title: "AP Human Geography", image: "aphug"), Classes(followers: 600, messages: 1001, posts: 124, title: "AP World History", image: "apwh"), Classes(followers: 100, messages: 500, posts: 42, title: "AP Physics 1", image: "apphy1")]
+
 
 
 struct HomeView_Previews: PreviewProvider {
